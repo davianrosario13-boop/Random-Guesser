@@ -5,6 +5,8 @@ A Yr.10 python project of mine where I created a guessing game. User has to try 
     *Defensive design used to prevent use of strings for a integar input.
     *Range filtering used to help user to pick an actual number between 1-100
     *Seperates genuine attempts to guess number from a failed attempt.
+    *User can replay the game if they want to
+    *High Score system if they user can guess in less attempts
 # How to Play
 1. Run this script into Python
 2. Try guessing the number using the clues for help
