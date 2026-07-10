@@ -39,14 +39,15 @@ while True: #keeps running the condition controlled loop until user guesses the 
             else: #if none of the other conditions are met then this block of code runs
                 Attempts += 1 #increments the value of Attempts by 1
                 print("Congratulations! You've guessed the number! It took you", Attempts, "attempts.") #outputs to the user message with the value of Attempts
+                break #breaks out of the loop
             if Fails != 0: #checks if the value of Fails is not equal to 0
                 print("However it took you", Fails, "failed attempts to understand what to do.") #outputs to the user the amount of fails they had in the program
-            break #breaks out of the loop causing the program to end
+                break #breaks out of the loop 
         else: #runs block of code if Guess is not a number
             print("Just enter a number.") #outputs message to user
             Fails += 1 #increments the value of Fails by 1
     if trys != 1: #checks if the value of trys is not equal to 1
-        if high_score < Attempts: #checks if the value of high_score is less than the value of Attempts
+        if high_score != Attempts and high_score < Attempts: #checks if the value of high_score doesn't equal the value of Attempts and is less than Attempts
             print("New high score! You now guessed in only", Attempts, "attempts.") #outputs message to user with the value of Attempts
     resp = input("Would you like to play again? (Y/N) ")  #asks the user if they want to play again
     while resp.upper() != "Y" and resp.upper() != "N": #checks if the user wants to play again
