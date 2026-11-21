@@ -3,8 +3,12 @@ import time #allows the use of a timer in the program
 #variables required for the program to store for later use
 high_score = 0 #sets the value of high_score to 0
 trys = 1 #sets the value of trys to 1
+<<<<<<< HEAD
 messages_sent = 0 
 first_messages = [ #2D array that hold messages to be outputted and time delay between each message
+=======
+messages = [ #2D array that hold messages to be outputted and time delay between each message instead of continious lines of prints and time.sleep to make program more smaller and easier to read
+>>>>>>> origin/main
     ("Hello World!",2),
     ("Let's play a game.",2.75),
     ("How about...",3),
@@ -13,16 +17,21 @@ first_messages = [ #2D array that hold messages to be outputted and time delay b
     ("Okay I'm thinking of a number between 1 and 100. Can you guess what it is?",4),
     ("Don't worry I'll give you some clues, along the way.",3)
 ]
+<<<<<<< HEAD
 for i in range(0,len(first_messages),1): #a count-controlled loop that outputs each of the messages in array messages, prevents the the use of having to continually writing print and delay liness of code
     msg, delay = first_messages[i] #Takes the msg and delay from the array messages based on position
+=======
+for i in range(0,len(messages),1): #a count-controlled loop that outputs each of the messages in array messages, makes program more efficent to fetch the message and time wait between them
+    msg, delay = messages[i] #Takes the msg and delay from the array messages based on position
+>>>>>>> origin/main
     print(msg) #outputs the message to the user
     time.sleep(delay) #timer used before next line of code can be run
-while True: #keeps running the condition controlled loop until user guesses the correct number
+while True: #keeps running the condition controlled loop until user guesses the correct number, so if the user wants to play again, while loop can be restarted
     value = random.randint(1, 100) #Picks a random number between 1 and 100 and stores it in value
     Guess = 0 #sets the value of Guess to 0
     Attempts = 0 #sets the value of Attempts to 0
     Fails = 0 #sets the value of Fails to 0
-    while True: #keeps running the condition controlled loop until user guesses the correct number
+    while True: #keeps running the condition controlled loop until user guesses the correct number, allows user to have multiple attempts to guess the number
         if trys == 1: #checks if the value of trys is equal to 1
             Guess = input("What is your guess? ") #asks the user for a number input storing it in Guess
         elif trys != 1 and messages_sent == 0:
@@ -66,6 +75,7 @@ while True: #keeps running the condition controlled loop until user guesses the 
         continue #re-executes the program by skipping the rest of the code and going back to the start of the loop allowing user to guess again
     else: #if the user does not want to play again
         print("Thanks for playing!") #outputs message to user and ends the program
+<<<<<<< HEAD
         break
 time.sleep(5) #timer used before next line of code can be run
 second_messages = [ #2D array that hold messages to be outputted and time delay between each message
@@ -150,3 +160,5 @@ while True: #keeps running the condition controlled loop until user guesses the 
         break #breaks out of the loop
 if sent == 0:
     print("Thanks for playing!") #outputs message to user and ends the program  
+=======
+>>>>>>> origin/main
